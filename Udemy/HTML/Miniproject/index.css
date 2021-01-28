@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main{
+    width:360px;
+    margin:2rem auto;
+    height: 560px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+    border-radius: 50px;
+    /* overflow: hidden; */ /* ถ้ากล่องลูกเกิดจากกล่องแม่ไปจะตัดทิ้ง */
+    position:relative;
+}
+
+.tag{
+    position: absolute;
+    top: -6px;
+    left:50%;
+    transform: translateX(-50%);
+    z-index:999;
+    padding:.5rem 2rem;
+    border-radius:5px;
+    background-color: tomato;
+    color: #fff;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.2)
+
+}
+
+.img{
+    height: 250px;
+    background:brown;
+    overflow: hidden;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    position: relative;
+}
+
+.img img/* Set tag ภายใน */
+{width: 100%;}
+.content{
+    text-align:center;
+    border-bottom: 2px solid #e5e5ee;
+    height:250px;
+    display:flex; /* ช่วยจัดหน้ากึ่งกลาง */
+    justify-content: center;
+    align-items: center;
+    padding:1rem;
+}
+
+.footer{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height:60px;
+}
+
+.ft-l{
+    display:flex;
+}
+
+.content h3{
+    border-bottom:1px solid #e5e5ee
+}
+
+.content h1{
+    margin: 1rem 0;
+}
+
+.content p{
+    color: #9f9f9f
+}
+
+.ft-l{
+    display:flex;
+    align-items: center;
+    padding-left: 2rem;
+}
+
+.ft-l img{
+    width: 40px;
+    height:40px;
+    border-radius: 50%;
+}
+
+.ft-l p{
+    margin-left:.5rem;
+}
+
+.ft-r {
+    padding-right:2rem;
+}
