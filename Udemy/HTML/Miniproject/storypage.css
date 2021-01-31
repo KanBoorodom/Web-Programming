@@ -1,78 +1,220 @@
+/*edit V2*/
+
+*{margin:0;
+border:0;}
+
+.head{
+    font-family: 'Courier New', Courier, monospace;
+    padding-top:80px;
+    padding-left:20px;
+
+}
+/*Top Profile*********************************/
 .top{
-    border-top-left-radius: 15px ;
-    border-top-right-radius: 15px ;
-    border:1px solid black;
     height: 250px;
-    background-image: url(https://images.unsplash.com/photo-1488866022504-f2584929ca5f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8OHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=600&q=60);
+    background-image: url(https://images.unsplash.com/photo-1564752253834-c18288c53f64?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8Y2F0JTIwdG95fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
     background-repeat: no-repeat;
     background-size: 100%;
-    background-color: rgba(0,0,255,0.5);
+}
+
+.status{
+    padding-top:50px;
+}
+.profilestatus{
+    position: absolute;
+    font-family: monospace;
+    font-size: 20px;
+    color:white;
+    padding-left:1160px;
+    margin-left:10px;
+    margin-top:32px;
+}
+
+.profilecir{
+    background-color: #47ed5b;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left:1150px;
+    margin-top:-11px;
+    
 }
 .profile{
-    margin-top: 80px;
-    height:250px;
-    width: 250px;
+    padding-top:50px;
+    height:200px;
+    width: 200px;
     margin-left: auto;
     margin-right: auto;
 }
 
-
-
-.mininame{
-    display: inline-block;
-    margin-left: 100px;
-    margin-top: 150px;
-    border:4px solid blue;
-}
-
 .pro {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     margin-left:auto;
     margin-right:auto;
 }
 
 .name{
+    padding-top:60px;
     font-family: monospace;
-    font-size: 30px;
+    font-size: 40px;
     letter-spacing: 5px;
-    margin-top:40px;
     color:white;
     text-align: center;
 }
  
+/*End Top Profile*********************************/
+
+/*Body and Content*********************************/
 .body{
-    background-color: rgb(255,255,240);
-    border:1px solid black;
     height:700px;
 }
 
-.first{
-    margin-top: 200px;
-    height:500px;
-    border:3px solid red;
-
-}
-.footer{
-    border:1px solid black;
-    height:50px;
+.first{padding-top:120px;
 }
 
 .story{
     display:flex;
-    border:4px solid orange;
-}
+/*     border:4px solid orange;
+ */}
 
-.story img{
+ .frprofile{
+     display:flex;
+ }
+.minipropic{
     margin-left:15px;
     width:50px;
     height:50px;
     border-radius: 50px;
 }
 
-.story p{
-    margin-left: 10px;
+.mininame{
+    padding-top:2px;
+    padding-left: 10px;
     font-family: monospace;
-    font-size: 15px;
+    font-size: 20px;
 }
+
+.online{
+    padding-left:75px;
+    margin-top:-25px;
+    font-family: monospace;
+    font-size: 20px;
+    color: #9f9f9f
+}
+.active{
+    display:flex;
+    padding-left:75px;
+    margin-top:-20px;
+}
+.activecir{
+    width:10px;
+    height:10px;
+    background-color:#47ed5b;
+    border-radius: 50%;
+}
+.active p{
+margin-top:-8px;
+padding-left:10px;
+font-family: monospace;
+font-size: 20px;
+color: #9f9f9f
+}
+.idlecir
+{
+    width:10px;
+    height:10px;
+    background-color:#e8ce6f;
+    border-radius: 50%;
+}
+.storypic{
+    margin-top:100px;
+    margin-left:auto;
+    margin-right:auto;
+    height: 50%;
+    width:50%;
+}
+
+.content{
+height: 500px;
+}
+
+.contentimg{
+    padding-top:30px;
+    display:block;
+    width: 80%;
+    height: 400px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.contentcaption{
+    padding-top:30px;
+    width:500px;
+    display:block;
+    margin-left:130px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.time{
+    padding-left:1030px;
+    margin-top:-20px;
+    color: #9f9f9f
+}
+.lac{
+    padding-top:10px;
+    display:flex;
+    margin-left:130px;
+    width:80%;
+    justify-content: space-between;
+
+}
+
+.like{display:flex;}
+.liketext{
+    margin-top:0px;
+    margin-left:15px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.comment{margin-left:10px;}
+
+.commenttext{margin-top:0px;
+margin-left:15px;
+font-family:'Courier New', Courier, monospace;
+}
+/*End Body and Content*********************************/
+
+/*Footer*********************************/
+.footer{
+    border:1px solid black;
+     height:50px;
+    }
+    
+.post{
+    margin-top:30px;
+}
+
+.endpage{
+
+border-top:0.5px solid #9f9f9f;
+margin-top:30px;
+height: 100px;}
+
+.brand{
+    padding-left:10px;
+    padding-top:30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;;
+}
+
+.contact{
+    padding-left:60px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;;
+
+}
+/*End Footer*********************************/
