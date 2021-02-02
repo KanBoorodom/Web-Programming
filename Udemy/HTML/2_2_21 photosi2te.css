@@ -1,0 +1,14 @@
+.head{
+    font-size: 1.5em;
+    font-weight:900;
+    font-family: 'Raleway', sans-serif;
+    margin: 2em 1em;
+    border-bottom: 2px solid rgb(159,159,159,.2);
+    width:30%;
+    padding-bottom: 2em;
+}
+
+img{
+    width:30%;
+    margin:calc(10%/6);
+}
