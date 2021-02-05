@@ -1,260 +1,178 @@
+/*edit3 add small screen*/
+html{font-size:16px;}
 body{
     padding:0;
     margin:0;
     box-sizing: border-box;
+    height:100%;
+    min-height: 100%;;
+    background-size:cover;
+    background-position:center;
+    overflow: auto;
 }
-main{    display:flex;
-        flex-direction: row;
-        height:100%;
-}
-.side{
-    width:100%;
+/* 2side till below 1000px width */
+.flex-container{
+    display:flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
     height: 100%;
+}
+.left-main{
+    width:70%;
     position:relative;
 }
-.side:before{
+.left-main:before{
     content:'';
     width:100%;
     height: 100%;
+    top:0;
+    left:0;
     position:absolute;
     background: url(https://images.unsplash.com/photo-1565299543923-37dd37887442?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1914&q=80);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
-    filter: brightness(50%);
+    filter: brightness(60%);
 }
-.quote{
-    color:white;
-    position:relative;
-}
-
-.side-top{
-    position:relative;
-    display:flex;
-    height:20%;
-    font-size:280%;
-}
-
-.side-mid{
-    position:relative;
-    display:flex;
-    flex-direction: column;   
-    margin-left: auto;
-    margin-right: auto; 
-    padding-top:5%;
-    height:70%;
+.text{    
+    padding-top:13%;
+    width:100%;
+    font-size:5vw;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    margin-top:5%;
     color:rgba(255,255,255,0.6);
-    font-family: 'Dancing Script', cursive;
-    font-size: 500%;
-    text-align: center;
-    transition: color 3s;
-}
-
-.side-mid:hover{color:white;}
-
-.side-mid-top-text{
-    width:30%;
-    max-width: 280px;
-    margin-left:auto;
-    margin-right:auto;
-}
-.side-mid-bot-text{
-    width:30%;
-    max-width: 280px;
-    margin-left:auto;
-    margin-right:auto;
-}
-
-.info{
-    width:40%;
-    height:100%;
-    display:flex;
-    flex-direction: column;
-    background: rgba(81, 68, 61,0.75);
-    border-left: 8px solid rgba(180, 152, 78,0.5);
-}
-.info-content{
-    text-align: center;
-    padding-top:5%;
-    padding-left:5%;
-    font-size: 180%;
-    color:rgba(255,255,255,0.65);
-    font-family: 'Dancing Script', cursive;
-}
-.info-brand{
-    padding-left:3%;
-    padding-top:20%;
-    font-size: 300%;
-    text-align: left;
-    color:rgba(255,255,255,0.7);
-    font-family: 'Dancing Script', cursive;
-    text-decoration: none;
+    position:absolute;
     transition:color 3s;
 }
-.info-brand:hover{color:white;}
-.info-order{
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+.text:hover{color:white;}
+.midquote{display:none;}
+.right-container{
+    width:30%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: rgba(81, 68, 61,0.75);
+    border-left: 8px solid rgba(180, 152, 78,0.5);
+    overflow: hidden;
+    padding-top:7%;
+}
+.right-main{
+    height:85%;
+    color:rgba(255,255,255,0.5);
+}
+
+.brand{
+    color:white;
+    font-size:4vw;
+    font-family: 'Dancing Script', cursive;
+    text-decoration: none;
+    margin-left:5%;
+}
+.cookie{font-size: 2vw;
+vertical-align:super ;}
+.bio{
+    font-size:1.8vw;
+    text-align:center;
+    margin-top:3%;
+    font-family: 'Dancing Script', cursive;
+    transition:color 3s;
+}
+.bio:hover{color:white;}
+.order{
+    font-size:1.5vw;
+    border-radius: 10px 10px 10px 10px;
     background-color: rgba(159,159,159,0.7);
-    max-width: 300px;
-    min-width: 205px;
-    width:20%;
-    margin-top:10%;
+    display:block;
+    width:35%;
+    text-align: center;
     margin-left:auto;
     margin-right:auto;
-    text-align: center;
-    font-size:30px;
+    margin-top:10%;
+    font-size:1.7vw;
     font-family: 'Source Code Pro', monospace;
     color:rgba(255,255,255,0.4);
+    transition:color 3s;
     text-decoration: none;
-    transition: color 2s;
 }
-.info-order:hover{
-    color:white;
-    background-color: rgba(159,159,159,1);
-}
+.order:hover{color:white;}
 
-.info-footer{
-    display: flex;
-    flex-direction: column;
-    margin-top:64%;
-    background-color: rgba(0,0,0,0.1);
-    color:rgba(255,255,255,0.65);
+.right-foot{
+    height:15%;
+    padding-top:2%;
     font-family: 'Source Code Pro', monospace;
-    text-align: left;
-    padding-left:5px;
+    font-size:.9vw;
+    padding-left:10px;
     transition: color 3s;
-}
-.info-footer:hover{
-    color:white;
+    background-color: rgba(0,0,0,0.1);
+    color:rgba(255,255,255,0.5);
+} 
+.right-foot:hover{color:white;}
+@media (max-width: 1500px) {
+    .brand{font-size:4vw;}
+    .bio{font-size:2vw;}
+    .order{font-size:2vw;}
+    .text{font-size:5vw;
+    margin-top:15%;}
+    .right-container{padding-top:15%;}
+    .right-foot{font-size:15px;}
 }
 
-@media (max-width:1000px){
-    .info{display:none;}
-    .side{
+@media (max-height: 450px) {
+    .brand,.bio,.order {
+      font-size: 4vh;
+    }
+    .text{font-size: 10vh;}
+  }
+
+@media (max-width: 600px) {
+    .flex-container{flex-direction: column;
+}
+    .left-main{
         width:100%;
-        height: 100%;
+        height:100%;
         position:relative;
     }
-    /* small 513x665 */
-    .side:before{
-        content:'';
+    .text{display:none;}
+    .right-container{
+        padding:0;
         width:100%;
-        height: 100%;
+        height:100%;
         position:absolute;
-        background: url(https://images.unsplash.com/photo-1565299543923-37dd37887442?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1914&q=80);
-        background-repeat: no-repeat;
-        background-size:cover;
-        background-position: center;
-        filter: brightness(50%);
+        background: rgba(81, 68, 61,0.67);
+        border-left: none;
+        border-top:8px solid rgba(180, 152, 78,0.5);
     }
-    
-    .quote{
-        color:white;
-        position:relative;
-    }
-    
-    .side-top{
-        position:relative;
+    .right-main{
         display:flex;
-        height:20%;
-        font-size:280%;
-    }
-    
-    .band{
-        display:block;
-        font-family: 'Dancing Script', cursive;
-        height:20%;
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 1.5em;
-        margin-top:1.8em;
-        color:rgba(180, 152, 78,.8);
-        text-decoration: none;
-        transition:color 3s;
-    }
-
-    .band:hover{
-        color:rgb(180, 152, 78);
-    }
-    .side-mid{
-        position:relative;
-        display:flex;
-        flex-direction: column;   
-        margin-left: auto;
-        margin-right: auto; 
-        height:60%;
-        color:rgba(255,255,255,0.6);
-        font-family: 'Dancing Script', cursive;
-        font-size: 500%;
+        flex-direction: column;
         text-align: center;
-        transition:color 3s;
-    }
-
-    .side-mid:hover{color:white;}
-    
-    .side-mid-top-text{
-        width:30%;
-        max-width: 280px;
-        margin-left:auto;
-        margin-right:auto;
-        border-top:3px solid rgba(255,255,255,0.5);
-    }
-    .side-mid-bot-text{
-        width:30%;
-        max-width: 280px;
-        margin-left:auto;
-        margin-right:auto;
-        border-bottom:3px solid rgba(255,255,255,0.5);
-    }
-    
-    .order{
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-        background-color: rgba(159,159,159,0.7);
-        max-width: 300px;
-        min-width: 205px;
-        width:20%;
-        margin-top:5%;
-        margin-left:auto;
-        margin-right:auto;
-        font-size:30px;
-        font-family: 'Source Code Pro', monospace;
-        color:rgba(255,255,255,0.4);
-        text-decoration: none;
-        transition: color 2s;
-    }
-    .order:hover{
-        color:white;
-        background-color: rgba(159,159,159,1);
-    }
-    
-    .side-foot{
-        position:absolute;
-        display:flex;
-        background:rgba(186, 218, 166, 0.5);
-        flex-direction:column;
-        justify-content: flex-start;
-        margin-top:6%;
-        width:98%;
-        padding-left:2%;
-        font-family: 'Source Code Pro', monospace;
-        font-size:15px;
         color:rgba(255,255,255,0.5);
-        transition: color 2s;
-        overflow:auto;
+        transition: color 1s;
     }
-    .side-foot:hover{
-        color:white;
+    .right-main:hover{color:white;}
+    .brand{      
+        color:white; 
+        font-size: 12vw;
     }
-}
-
-@media (min-width:1000px){
-    .band{display:none;}
-    .order{display:none;}
-    .side-foot{display:none;}
+    .bio{       
+        font-size: 3.5vw;
+        margin-top:1vh;
+    }
+    .midquote{
+        font-size:8vh;
+        font-family: 'Dancing Script', cursive;
+        text-align: center;
+        margin-top:1vh;
+        display:block;
+    }
+    .order{
+        font-size:3vw;
+        width:20%;
+        height:4%;
+        margin-top:3vh;
+        padding-top:3px;
+    }
+    .right-foot{
+        font-size: 1.7vw;
+    }   
 }
