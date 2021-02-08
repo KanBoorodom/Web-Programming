@@ -1,0 +1,383 @@
+html{font-size:16px;}
+
+body{padding:0;
+margin:0;
+box-sizing:border-box;}
+
+
+#flex-container{
+height:70vh;
+display:flex;
+flex-direction: row;
+
+}
+
+#flex-container div{
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+}
+.menu{
+    display:flex;
+    flex-direction: column;
+    border:5px solid black;
+}
+
+.brand{
+    color:white;
+    font-size:6vw;
+    z-index: 10;
+    font-family: 'Raleway', sans-serif;
+    align-self: center;
+    margin-top:15px;
+    align-items: flex-start;
+}
+.subbrand{
+    font-size:2vw;
+    align-self:center;
+    font-family: 'Raleway', sans-serif;
+    z-index: 10;
+    color:white;
+    text-align: center;
+}
+.third-inside-flex{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index:10;
+    height:200px;
+}
+.view{
+    font-size:2vw;
+    align-self:center;
+    font-family: 'Raleway', sans-serif;
+    z-index: 10;
+    color:rgba(0,0,0,0.8);
+    background:rgba(255,255,255,0.5);
+    text-decoration: none;
+    transition:all 3s;
+}
+.reserve:hover{color:black;
+    background:rgba(255,255,255,0.8);
+
+}
+
+.frenchfries{
+    z-index: 10;
+    font-family: 'Raleway', sans-serif;
+    font-size:2vw;
+    font-weight: bolder;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.food{
+    z-index: 10;
+    font-size:2vw;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    writing-mode:vertical-lr;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top:60px;
+}
+.first-img{
+background:url(https://images.unsplash.com/photo-1586769412527-ab0855979b2e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzR8fGljZWNyZWFtfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+position:relative;
+width:20%;
+position:relative;
+display:flex;
+flex-direction: column;
+justify-content: center;
+color:rgba(255, 221, 230,0.2);
+transition:color 3s;
+}
+.first-img:hover{color:rgba(255, 221, 230,1)}
+.first-img:hover:before,.second-img:hover:before,.third-img:hover:before,.forth-img:hover:before,.fiv-img:hover:before{
+    filter: brightness(100%);}
+
+.first-img:before{
+    content:'';
+    width:100%;
+    height:100%;
+    position:absolute;
+    background:url(https://images.unsplash.com/photo-1586769412527-ab0855979b2e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzR8fGljZWNyZWFtfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter: brightness(50%);
+    transition: filter 3s;
+}
+
+.second-img{
+    background:url(https://images.unsplash.com/photo-1583898350903-99fa829dad3d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OHx8Y29ja3RhaWx8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+    background-size:cover;
+    width:20%;
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    color:rgba(255, 68, 117,0.2);
+    transition:color 3s;
+
+}
+.second-img:hover{ color:rgba(255, 68, 117,0.8)}
+
+.second-img:before{
+    content:'';
+    width:100%;
+    height:100%;
+    position:absolute;
+    background:url(https://images.unsplash.com/photo-1583898350903-99fa829dad3d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OHx8Y29ja3RhaWx8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    filter: brightness(50%);
+    transition: filter 3s;
+}
+
+.third-img{
+    background:url(https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTA0fHxmcmVuY2glMjBmcmllc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+    background-size:cover;
+    background-position:22%;
+    width:20%;
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    color:rgba(255, 218, 119,0.2);
+    transition:color 3s;
+}
+.third-img:hover{    color:rgba(255, 218, 119,1);}
+.third-img:before{
+    content:'';
+    width:100%;
+    height:100%;
+    position:absolute;
+    background:url(https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTA0fHxmcmVuY2glMjBmcmllc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:22%;
+    filter: brightness(50%);
+    transition: filter 3s;
+}
+
+
+.forth-img{
+    background:url(https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8YnVyZ2VyfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+    background-size: cover;
+    background-position: 35%;
+    width:20%;
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    color:rgba(145, 53, 25,0.2);
+    transition:color 3s;
+}
+.forth-img:hover{color:rgba(145, 53, 25,1);}
+
+.forth-img:before{
+    content:'';
+    width:100%;
+    height:100%;
+    position:absolute;
+    background:url(https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8YnVyZ2VyfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: 35%;
+    filter: brightness(50%);
+    transition: filter 3s;
+}
+
+.fiv-img{
+    background: url(https://images.unsplash.com/photo-1583953623787-ada99d338235?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8c3RlYWt8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+    background-size: cover;
+    width:20%;
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    color:rgba(47, 153, 151,0.3);
+    transition:color 3s;
+}
+.fiv-img:hover{color:rgba(47, 153, 151,1)}
+.fiv-img:before{
+    content:'';
+    width:100%;
+    height:100%;
+    position:absolute;
+    background: url(https://images.unsplash.com/photo-1583953623787-ada99d338235?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8c3RlYWt8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    filter: brightness(50%);
+    transition: filter 3s;
+}
+
+.space-white{
+    background:white;
+    color:black;
+    text-align: center;
+    font-size:4vw;
+    font-family: 'Raleway', sans-serif;
+}
+.space-black{
+    background:black;
+    color:white;
+    text-align: center;
+    font-size:4vw;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* เริ่ม ส่วน Our story ****************************************/
+.our{
+    display:flex;
+    height:60vh;
+    color:white;
+    font-family: 'Raleway', sans-serif;
+}
+.our-head{    
+    margin-top:-10%;
+}
+.our-l{
+    display:flex;
+    flex-direction: column;
+    width:50%;
+    background: black;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 3vw;
+}
+.our-descrip{
+    margin-top:-10%;
+    font-size: 1vw;
+    text-align: center;
+    width:70%;
+}
+.our-about{
+    text-align: center;
+    color:black;
+    font-size: 2vw;
+    background-color: white;
+    text-decoration: none;
+}
+.our-about:hover{background-color: rgba(255,255,255,0.9);}
+.our-r{
+    width:50%;
+    background: url(https://images.unsplash.com/photo-1577106263724-2c8e03bfe9cf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hlZnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+    background-size: cover;
+    background-position: center;
+    filter: brightness(70%);
+}
+/* จบ ส่วน Our story ****************************************/
+
+/* เริ่ม ส่วน ingredient ****************************************/
+.ingredient{
+    display:flex;
+    height:60vh;
+    color:black;
+    font-family: 'Raleway', sans-serif;
+}
+.ingre-l{
+    background:url(https://images.unsplash.com/photo-1506368249639-73a05d6f6488?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8aW5ncmVkaWVudHN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+    width:50vw;
+    background-size:cover;
+    background-position:center;
+    filter:brightness(80%);
+}
+.ingre-r{
+    font-size: 3vw;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    width:50%;
+}
+.ingre-head{    
+    margin-top:-20%;
+}
+.ingre-descrip{
+    margin-top:-20%;
+    font-size:1vw;
+    text-align: center;
+    width:70%;
+}
+/* จบ ส่วน ingredient ****************************************/
+
+/* เริ่ม ส่วน quote ****************************************/
+.reserve{
+    display:flex;
+    height:60vh;
+    color:black;
+    font-family: 'Raleway', sans-serif;
+}
+.reserve-l{
+    width:50%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.reserve-head{
+    font-size:3vw;
+    text-align: center;
+}
+.reserve-sub-head{font-size:1.5vw;}
+.reserve-descrip{
+    font-size:1vw;
+    text-align: center;
+    width:70%;
+    margin-top:-10%;
+}
+.reserve-but{
+    text-align: center;
+    color:white;
+    font-size: 2vw;
+    background-color: black;
+    text-decoration: none;
+    margin-top:-10%;
+}
+.reserve-but:hover{background-color:rgba(0,0,0,0.7)}
+.reserve-r{
+    width:50%;
+    display:flex;
+}
+.reserve-r-first{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:50%;
+    height:100%;
+}
+.reserve-r-img1{
+    width:80%;
+    filter: brightness(90%);
+}
+.reserve-r-img2{
+    width:80%;
+    margin-top:10%;
+}
+.reserve-r-sec{
+    width:50%;
+    display:flex;
+    justify-content: center;
+    filter: brightness(90%);
+}
+.reserve-r-img3{
+    height:90%;
+    padding-top:5%;
+    filter: brightness(90%);
+}
+/* จบ ส่วน quote ****************************************/
+
+footer{
+    text-align: center;
+    padding-top:5px;
+    background:black;
+    color:white;
+    padding-left:5px;
+    font-size:1vw;
+}
+
