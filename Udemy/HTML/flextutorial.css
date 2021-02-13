@@ -1,0 +1,47 @@
+/* padding auto ไม่มีประโยชน์ */
+.container{background-color:#9f9f9f;
+padding-top:20px;
+}
+.form-row{
+    padding:10px 10px;
+    display:flex;
+}   
+
+form{
+    margin:20px auto;
+    background-color:white;
+    max-width:1200px;
+    
+}
+.form-row label{
+    padding-right:10px;
+}
+
+.form-row input{
+    flex:1;
+}
+
+.column-layout{
+    max-width: 1300px;
+    background-color:#FFF;
+    margin:40px auto 0 auto;
+    line-height: 1.65;
+    padding:20px 50px;
+    display:flex;
+}
+
+/* order คือลำดับ การเลียง item ใน flexbox */
+.main-column{
+    flex:2;
+    order:2;
+}
+
+.sidebar-one{
+    flex:1;
+    order:1;
+}
+
+.sidebar-two{
+    flex:1;
+    order:3;
+}
