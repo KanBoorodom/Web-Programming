@@ -1,0 +1,134 @@
+*{padding:0;
+margin:0;
+box-sizing: border-box;
+font-family: 'Signika', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+/* Header section */
+header{
+    background:red;
+    background-image:url('bg-header-desktop.png');
+    background-position: 10% 100%;
+    background-size: cover;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding:50px 0;
+}
+
+header div{
+    font-size:2.5rem;
+    text-align: center;
+    color:rgba(0,0,0,0.7);
+}
+
+.copy{
+    font-size:13rem;
+    font-weight: 300;
+    color:rgb(93,224,193);
+}
+
+header p{
+    font-size: 1.3rem;
+    text-align: center;
+    color:#9f9f9f;
+    margin-top:50px;
+}
+
+.btn{
+    font-size: 1.3rem;
+    margin-top:30px;
+}
+
+.button1{
+    background:rgb(50, 216, 177);
+    color:white;
+    display:inline-block;
+    width:90%;
+    height:50px;
+    border-radius: 30px;
+    text-align: center;
+}
+.button2{
+    background:rgb(34, 69, 181);
+    margin-top:20px;
+    color:white;
+    display:inline-block;
+    width:90%;
+    height:100%;
+    border-radius: 30px;
+}
+
+.button1:hover{background-color:rgba(50, 216, 177,0.8)}
+.button2:hover{background-color:rgba(34, 69, 181,0.8)}
+
+/* End of Header section */
+
+/* Main Section */
+.main{
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    padding:50px 0;
+}
+
+.mhd{
+    font-size:2.5rem;
+    color:rgba(0,0,0,0.7)
+}
+
+.mhp{
+    font-size: 1.3rem;
+    color:#9f9f9f;
+    margin-top:20px;
+    margin-bottom:30px;
+}
+
+.main-content img{
+    width:95%;
+    margin:50px auto;
+}
+
+.main-content div{}
+
+/*End of Main Section */
+
+/* header div{
+    font-size:10rem;
+    font-weight:100;
+    color:rgb(93, 224, 193);
+}
+header p{
+    width:500px;
+    color:#9f9f9f;
+    margin:0 auto;
+}
+
+.btn{
+    font-size: 1rem;
+    margin-top:50px;
+}
+.button1{
+    background:rgb(50, 216, 177);
+    color:white;
+    display:inline-block;
+    width:200px;
+    height:40px;
+    border-radius: 30px;
+    padding:10px 0;
+}
+.button2{
+    background:rgb(34, 69, 181);
+    margin-left:20px;
+    color:white;
+    display:inline-block;
+    width:200px;
+    height:40px;
+    border-radius: 30px;
+    padding:10px 0;
+}
+.button1:hover{background-color:rgba(50, 216, 177,0.8)}
+.button2:hover{background-color:rgba(34, 69, 181,0.8)}
+ */
