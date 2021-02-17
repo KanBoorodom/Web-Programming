@@ -5,6 +5,8 @@ font-family: 'Bai Jamjuree', sans-serif;}
 a{
     text-decoration: none;
 }
+
+/* Mobile ***************************/
 /* Header section */
 header{
     background-image:url('bg-header-mobile.png');
@@ -41,6 +43,7 @@ header p{
     font-size: 1.3rem;
     margin-top:100px;
     width: 100%;
+    max-width: 590px;
     height:100px;
 }
 
@@ -52,6 +55,7 @@ header p{
     border-radius: 30px;
     text-align: center;
     width:90%;
+    max-width:300px;
     height:50%;
     padding-top:10px;
 }
@@ -63,6 +67,7 @@ header p{
     display:inline-block;
     border-radius: 30px;
     width:90%;
+    max-width:300px;
     height:50%;
     padding-top:10px;
 }
@@ -123,7 +128,90 @@ margin:0 auto;
 
 /* Footer section */
 footer{
-    background:rgba(159,159,159,0.3);
-    height:100%;
+    background:rgba(159,159,159,0.1);
+    text-align: center;
+}
+
+.foot{
+    font-size: 10rem;
+}
+
+.foot-text{
+    font-size:1.5rem;
+    margin-bottom:30px;
+}
+.foot-logo{height:100px;
+    padding-left:50px;
+}
+.foot-logo div{
+    display:inline;
 }
 /* End of Footer section */
+/* End of Mobile ***************************/
+
+/* Desktop ***************************/
+
+@media only screen and (min-width: 1031px) {
+    /* Header section */
+    header{background-image: url('bg-header-desktop.png');
+    padding-bottom:0;
+    }
+    header p{width:700px;}
+    .btn{
+        width:50%;
+        align-self:center;
+        margin:50px auto;
+    }
+    .button1{
+        display:inline-block;
+        width:250px;
+    }
+    .button2{
+        display:inline-block;
+        margin-left:10px;
+        width:250px;
+    }
+
+    /* End of Header section */
+
+    /* Main Section */
+    .main-content{
+        margin-top:100px;
+        display:flex;
+        flex-direction: column;
+    }
+    .mhp{
+        width:50%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .main-content-row{
+        display:flex;
+    }
+    .main-content-row img{
+        margin-left:-50px;
+        margin-right:0;
+        height:600px;
+        width:70%;
+        max-width:800px;
+    }
+    .main-content-col{
+        display:flex;
+        flex-direction: column;
+        padding-top:100px;
+        text-align: left;
+    }
+    .main-content-col .mhd{
+        padding-left:100px;
+    }
+
+    .main-content-col .mhp{
+        margin:0;
+        padding-left:100px;
+        width:70%;
+        margin-top:20px;
+        margin-bottom:50px;
+    }
+    /* End of Main Section */
+
+}
