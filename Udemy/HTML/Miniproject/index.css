@@ -1,94 +1,164 @@
 *{
-    margin: 0;
     padding:0;
+    margin:0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+}
+    
+a{text-decoration: none;}
+
+body{
+    min-width: 300px;
+    overflow: auto;
+}
+/* font-family: 'Open Sans', sans-serif;
+ */
+
+/* Start of Mobile side width 375 px */
+/* Header Start */
+header{
+    background-image: url('https://raw.githubusercontent.com/KanBoorodom/Web-Programming/68f648cd21d82f6d674b0dd95c25885eebab66cb/Udemy/HTML/Miniproject/huddle_images/bg-hero-mobile.svg');
+    height: 750px;
+    font-family: 'Poppins', sans-serif;
 }
 
-.main{
-    width:360px;
-    margin:2rem auto;
-    height: 560px;
-    box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
-    border-radius: 50px;
-    /* overflow: hidden; */ /* ถ้ากล่องลูกเกิดจากกล่องแม่ไปจะตัดทิ้ง */
-    position:relative;
-}
-
-.tag{
-    position: absolute;
-    top: -6px;
-    left:50%;
-    transform: translateX(-50%);
-    z-index:999;
-    padding:.5rem 2rem;
-    border-radius:5px;
-    background-color: tomato;
-    color: #fff;
-    box-shadow: 3px 3px 10px rgba(0,0,0,0.2)
-
-}
-
-.img{
-    height: 250px;
-    background:brown;
-    overflow: hidden;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    position: relative;
-}
-
-.img img/* Set tag ภายใน */
-{width: 100%;}
-.content{
-    text-align:center;
-    border-bottom: 2px solid #e5e5ee;
-    height:250px;
-    display:flex; /* ช่วยจัดหน้ากึ่งกลาง */
-    justify-content: center;
-    align-items: center;
-    padding:1rem;
-}
-
-.footer{
+.header-top{
+    padding:20px 20px 0 20px;
     display:flex;
     justify-content: space-between;
-    align-items: center;
-    height:60px;
+    flex-wrap: wrap;
 }
 
-.ft-l{
+.header-top img{
+    height:20px;
+}
+
+.header-top a{
+    color:black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 50px;
+    width:100px;
+    height:25px;
+    font-size:.8rem;
+    text-align:center;
+    
+}
+
+.header-container{
     display:flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top:100px;
 }
 
-.content h3{
-    border-bottom:1px solid #e5e5ee
+.header-container img{
+    width:300px;
+    margin:50px auto 0 auto;
 }
 
-.content h1{
-    margin: 1rem 0;
+.header-text div{
+    width:300px;
+    margin:0 auto;
+    font-size:1.5rem;
+    font-weight: 600;;
+} 
+
+.header-text p{
+    margin:0 20px 0 20px;
+    max-width:700px;
+    font-size:1.2rem;
+    font-weight:400;
 }
 
-.content p{
-    color: #9f9f9f
+.header-text a{
+    margin:20px auto 0 auto;
+    padding-top:10px;
+    border-radius: 50px;
+    background-color: hsl(322, 96%, 69%);
+    width:250px;
+    height:50px;
+    display:block;
+    color:white;
 }
 
-.ft-l{
-    display:flex;
-    align-items: center;
-    padding-left: 2rem;
+.header-text a:hover{
+    background-color:hsl(322, 96%, 75%);
+}
+/* Header End */
+
+/* End of Mobile side*/
+@media only screen and (min-width: 740px) and (max-width:1024px){
+    .header-text p{
+        margin:0 auto;
+    }
+
 }
 
-.ft-l img{
-    width: 40px;
-    height:40px;
-    border-radius: 50%;
-}
+/* Desktop side */
+@media only screen and (min-width: 1024px){
+    header{
+        height:600px;
+    }
+    .header-top img{
+        height:30px;
+    }
+    
+    .header-top a{
+        padding-top:10px;
+        margin-right:100px;
+        width:180px;
+        height:40px;
+        font-size:1rem;
+        font-weight: bolder;
+    }
+    
 
-.ft-l p{
-    margin-left:.5rem;
-}
+    .header-container{
+        flex-direction: row;
+        margin:0; 
+    }
 
-.ft-r {
-    padding-right:2rem;
+    .header-text{
+        flex-basis: 50%;
+        text-align: left;
+    }
+
+
+
+    .header-text div{
+        width:400px;
+        font-size:2rem;
+        margin:150px 0 0 50px;
+    } 
+    
+    .header-text p{
+        width:80%;
+        min-width:400px;
+        font-size:1.2rem;
+        margin:20px 0 0 50px;
+        font-weight:400;
+        display:block;
+    }
+    
+    .header-text a{
+        margin:30px 0 0 50px;
+        padding-top:10px;
+        text-align: center;
+        width:250px;
+        height:50px;
+        display:block;
+        color:white;
+    }
+
+    
+
+    .header-container img{
+        flex-basis:40%;
+        min-width: 480px;
+        max-width:640px;
+        min-height: 410px;
+        margin-right:100px;
+    }
+    
 }
+    /* End of Desktop side */
+
