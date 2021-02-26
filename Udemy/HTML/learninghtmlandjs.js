@@ -11,7 +11,7 @@
  })*/
 
 // 25.2.21
-
+/*
  const tweetForm = document.querySelector('#tweetForm')
  const usr = document.querySelectorAll('input')[0] 
  const tweet = document.querySelectorAll('input')[1]  
@@ -26,9 +26,7 @@
      addTweet(usrname.value,tweet.value)
      usrname.value = '';
      tweet.value = '';
- })
-
- const addTweet = (username,tweet)=>{
+     const addTweet = (username,tweet)=>{
     const newTweet = document.createElement('li');
     const bTag = document.createElement('b');
     bTag.append(username);
@@ -36,3 +34,27 @@
     newTweet.append(`-${ tweet}`)
     tweetContainer.append(newTweet);
  }
+ })*/
+
+// 26.2.21
+ const form = document.querySelector('form')
+ const product = document.querySelector('#product')
+ const ul = document.querySelector('ul');
+ const qty = document.querySelector('#qty');
+
+ form.addEventListener('submit',(evt)=>{
+     evt.preventDefault();
+     grocceryList(product,qty);
+
+ })
+
+ const grocceryList = (product,qty)=>{
+     let li = document.createElement('li');
+     li.innerText = `${qty.value} ${product.value}`;
+     ul.appendChild(li)
+     qty.value = '';
+     product.value = '';
+ }
+
+
+ 
