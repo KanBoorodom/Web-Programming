@@ -11,8 +11,9 @@
  })*/
 
 // 25.2.21
+// 27.2.21 add remove when click on LI tag
 /*
- const tweetForm = document.querySelector('#tweetForm')
+  const tweetForm = document.querySelector('#tweetForm')
  const usr = document.querySelectorAll('input')[0] 
  const tweet = document.querySelectorAll('input')[1]  
  const tweetContainer = document.querySelector('#tweet')
@@ -26,7 +27,9 @@
      addTweet(usrname.value,tweet.value)
      usrname.value = '';
      tweet.value = '';
-     const addTweet = (username,tweet)=>{
+ })
+
+ const addTweet = (username,tweet)=>{
     const newTweet = document.createElement('li');
     const bTag = document.createElement('b');
     bTag.append(username);
@@ -34,7 +37,12 @@
     newTweet.append(`-${ tweet}`)
     tweetContainer.append(newTweet);
  }
- })*/
+
+ tweetContainer.addEventListener('click',function(e){
+     //e.target.remove(); remove everything that in side container that u click
+     e.target.nodeName === 'LI' && e.target.remove();
+ })
+*/
 
 // 26.2.21
  const form = document.querySelector('form')
