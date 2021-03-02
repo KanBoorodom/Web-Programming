@@ -1,0 +1,6 @@
+/* inline take only as much space as they need width and height not effect
+inline-block  inline element, that width & height properties can be set
+*/
+div{display:inline-block;
+text-align: center;}
+img{display: block;}
