@@ -29,7 +29,7 @@ login('abcde')
     })
 */
 
-// await wait async to complete and continue do anything
+// await wait execution till promise is complete and continue do anything
 
 const delayedColorChange = (color, delay) => {
     return new Promise ( (resolve,reject) =>{
@@ -40,6 +40,7 @@ const delayedColorChange = (color, delay) => {
     })
 }
 //await จะคู่กับ async
+/*
 async function rainbow(){
     await delayedColorChange('red', 1000)
     console.log('Hi')
@@ -55,3 +56,34 @@ async function printRainbow(){
     console.log("End of rainbow")
 }
 printRainbow()
+*/
+const fakeRequest = (url) => {
+    return new Promise((resolve, reject) =>{
+        const rand = Math.random()
+        setTimeout(() => {
+            if (rand > 0.7){
+                resolve('Your fake data here')
+            }
+            reject('This is reject: Request Error !!!')
+        }, 1000)
+    })
+}
+
+async function makeTwoRequests(){
+    try{
+        let data1 = await fakeRequest('/page1');
+        let data2 = await fakeRequest('/page2');
+        console.log(data1)
+        console.log(data2)
+        console.log('DONE')
+    }
+        //if reject happen without handle the line below will not be execute
+    catch(e){
+        //e is reject
+        console.log('Error catch: ',e)
+       // console.log(e)
+    }
+} 
+
+
+makeTwoRequests()
