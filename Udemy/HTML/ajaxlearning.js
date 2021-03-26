@@ -76,12 +76,38 @@ req.send();
     }
 }  */
 
+const jokes = document.querySelector('#jokes')
+const button = document.querySelector('button')
 
 const getDadJoke = async()=> {
     //ต้องการข้อมูลแค่ส่วน json 
-    const config = { headers: { Accept: 'application/json'}}
-    const res = await axios.get("https://icanhazdadjoke.com",config)
-    //ถ้า res ไม่มี config ด้วยข้อมูลจะมาทั้งหมดเลย
-    console.log(res.data.joke )
-
+    try{
+        const config = { headers: { Accept: 'application/json'}}
+        const res = await axios.get("https://icanhazdadjoke.com",config)
+        //ถ้า res ไม่มี config ด้วยข้อมูลจะมาทั้งหมดเลย
+        console.log(res.data.joke )
+        return res.data.joke;}
+        catch(e){
+            return "NO JOKE AVIALABLE NOW"
+        }
 }
+/* ถ้าไม่ใส่ async await จะสร้าง LI แล้วพิมพ์เป็น object Promise ออกมา
+เพราะ json ยังรับข้อมูลมาไม่เสร็จ 
+const addNewJoke = () => {
+    const jokeText = getDadJoke()
+    console.log(jokeText)
+    const newLI = document.createElement('li')
+    newLI.append(jokeText);
+    jokes.append(newLI)
+}*/
+
+
+const addNewJoke = async () => {
+    const jokeText = await getDadJoke()
+    console.log(jokeText)
+    const newLI = document.createElement('li')
+    newLI.append(jokeText);
+    jokes.append(newLI)
+}
+
+button.addEventListener('click',addNewJoke)
